@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="100%" height="100%" fill="#f9fafb" />
+<text x="450.0" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#111827">interesting_pairs_batch: Total Rows vs Runtime (All Files)</text>
+<text x="450.0" y="500" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#374151">Total rows budget</text>
+<text x="28" y="260.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#374151" transform="rotate(-90 28 260.0)">Runtime (seconds)</text>
+<line x1="90" y1="440.00" x2="870" y2="440.00" stroke="#e5e7eb" stroke-width="1" />
+<text x="80" y="445.00" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">0.00s</text>
+<line x1="90" y1="303.59" x2="870" y2="303.59" stroke="#e5e7eb" stroke-width="1" />
+<text x="80" y="308.59" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">50.00s</text>
+<line x1="90" y1="167.18" x2="870" y2="167.18" stroke="#e5e7eb" stroke-width="1" />
+<text x="80" y="172.18" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">100.00s</text>
+<line x1="499.73" y1="70" x2="499.73" y2="440" stroke="#eef2f7" stroke-width="1" />
+<text x="499.73" y="464" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">20,000,000</text>
+<line x1="704.60" y1="70" x2="704.60" y2="440" stroke="#eef2f7" stroke-width="1" />
+<text x="704.60" y="464" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">40,000,000</text>
+<line x1="824.44" y1="70" x2="824.44" y2="440" stroke="#eef2f7" stroke-width="1" />
+<text x="824.44" y="464" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">60,000,000</text>
+<line x1="909.47" y1="70" x2="909.47" y2="440" stroke="#eef2f7" stroke-width="1" />
+<text x="909.47" y="464" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#4b5563">80,000,000</text>
+<line x1="90" y1="440" x2="870" y2="440" stroke="#111827" stroke-width="1.5" />
+<line x1="90" y1="70" x2="90" y2="440" stroke="#111827" stroke-width="1.5" />
+<polyline fill="none" stroke="#0f766e" stroke-width="3" points="90.00,279.18 294.87,264.83 414.71,252.65 499.73,238.15 565.69,225.23 619.57,212.14 665.13,199.35 704.60,186.09 739.41,172.25 770.55,160.02 798.72,143.65 824.44,130.91 848.10,115.70 870.00,103.64" />
+<circle cx="90.00" cy="279.18" r="5" fill="#0f766e" />
+<text x="90.00" y="269.18" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">58.95s</text>
+<circle cx="294.87" cy="264.83" r="5" fill="#0f766e" />
+<text x="294.87" y="254.83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">64.21s</text>
+<circle cx="414.71" cy="252.65" r="5" fill="#0f766e" />
+<text x="414.71" y="242.65" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">68.67s</text>
+<circle cx="499.73" cy="238.15" r="5" fill="#0f766e" />
+<text x="499.73" y="228.15" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">73.98s</text>
+<circle cx="565.69" cy="225.23" r="5" fill="#0f766e" />
+<text x="565.69" y="215.23" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">78.72s</text>
+<circle cx="619.57" cy="212.14" r="5" fill="#0f766e" />
+<text x="619.57" y="202.14" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">83.52s</text>
+<circle cx="665.13" cy="199.35" r="5" fill="#0f766e" />
+<text x="665.13" y="189.35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">88.21s</text>
+<circle cx="704.60" cy="186.09" r="5" fill="#0f766e" />
+<text x="704.60" y="176.09" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">93.07s</text>
+<circle cx="739.41" cy="172.25" r="5" fill="#0f766e" />
+<text x="739.41" y="162.25" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">98.14s</text>
+<circle cx="770.55" cy="160.02" r="5" fill="#0f766e" />
+<text x="770.55" y="150.02" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">102.62s</text>
+<circle cx="798.72" cy="143.65" r="5" fill="#0f766e" />
+<text x="798.72" y="133.65" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">108.62s</text>
+<circle cx="824.44" cy="130.91" r="5" fill="#0f766e" />
+<text x="824.44" y="120.91" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">113.29s</text>
+<circle cx="848.10" cy="115.70" r="5" fill="#0f766e" />
+<text x="848.10" y="105.70" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">118.87s</text>
+<circle cx="870.00" cy="103.64" r="5" fill="#0f766e" />
+<text x="870.00" y="93.64" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#134e4a">123.29s</text>
+</svg>

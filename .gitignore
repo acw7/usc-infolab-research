@@ -1,0 +1,14 @@
+# Data files — never commit these
+*.parquet
+*.csv
+*.json
+data_files/
+raw/
+output/
+
+# Python clutter
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.ipynb_checkpoints
