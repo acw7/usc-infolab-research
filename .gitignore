@@ -6,6 +6,12 @@ data_files/
 raw/
 output/
 
+# Generated maps/visualizations — regeneratable, not source
+heatmap.html
+h3_step5.html
+interesting_pair_maps/
+qualifying_caid_maps/
+
 # Python clutter
 __pycache__/
 *.pyc
