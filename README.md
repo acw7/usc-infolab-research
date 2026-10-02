@@ -45,3 +45,20 @@ Early-stage: pipeline mines and visualizes interesting A→B pairs. Route
 *prediction* (the ultimate goal) has not been built yet — current work is
 focused on figuring out how much data/what thresholds are needed to make
 that feasible.
+
+## Route API (MVP)
+
+`route_api.py` predicts the most likely route between two lat/lon points.
+It builds a hex-to-hex transition graph from all user ping sequences (edge
+weight = `-log P(next hex | current hex)`), then runs Dijkstra, so it works
+even for A→B pairs never observed as a single trip.
+
+```bash
+python3 route_api.py build data_files/january graph.pkl --rows-per-file 5000000
+python3 route_api.py serve graph.pkl --host <lab-internal-ip> --port 8000
+curl "http://<host>:8000/route?lat_a=37.7823&lon_a=-122.4083&lat_b=37.3853&lon_b=-122.0311"
+python3 route_api.py demo   # self-check
+```
+
+Response: `{"probability": float, "path": [{"cell", "lat", "lon"}, ...]}`.
+400 = bad input, 404 = no route. Internal network only: no auth.
