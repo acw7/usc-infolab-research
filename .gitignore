@@ -18,3 +18,5 @@ __pycache__/
 .env
 .DS_Store
 *.ipynb_checkpoints
+# Built route graphs
+*.pkl

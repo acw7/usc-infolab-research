@@ -11,7 +11,6 @@ import folium
 import branca.colormap as cm
 import h3
 import pyarrow.dataset as ds
-from math import radians, sin, cos, sqrt, atan2
 import csv
 
 # Data Config
@@ -345,12 +344,7 @@ def describe_trips(trips: list[list[str]], hex_probs: dict[str, float], top_k: i
 
 @lru_cache(maxsize=None)
 def haversine_km(cell_a: str, cell_b: str) -> float:
-    lat1, lon1 = h3.cell_to_latlng(cell_a)
-    lat2, lon2 = h3.cell_to_latlng(cell_b)
-    R = 6371
-    dlat, dlon = radians(lat2-lat1), radians(lon2-lon1)
-    a = sin(dlat/2)**2 + cos(radians(lat1))*cos(radians(lat2))*sin(dlon/2)**2
-    return 2 * R * atan2(sqrt(a), sqrt(1-a))
+    return h3.great_circle_distance(h3.cell_to_latlng(cell_a), h3.cell_to_latlng(cell_b), unit="km")
 
 def main():
     t0 = time.time()

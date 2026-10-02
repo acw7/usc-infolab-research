@@ -18,18 +18,6 @@ DEFAULT_TIME_THRESHOLDS = [900, 1_800, 3_600, 7_200, 14_400]
 DEFAULT_OUTPUT_DIR = Path("interesting_pairs_batch_experiments")
 
 
-def parse_int_list(raw: str) -> list[int]:
-    values = []
-    for part in raw.split(","):
-        token = part.strip()
-        if not token:
-            continue
-        values.append(int(token))
-    if not values:
-        raise ValueError("Expected at least one integer value.")
-    return values
-
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -58,19 +46,19 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--row-budgets",
-        type=parse_int_list,
+        type=ipb.parse_int_list,
         default=DEFAULT_ROW_BUDGETS,
         help="Comma-separated total row budgets for the rows-vs-time sweep.",
     )
     parser.add_argument(
         "--min-path-hexes-values",
-        type=parse_int_list,
+        type=ipb.parse_int_list,
         default=DEFAULT_MIN_PATH_HEXES,
         help="Comma-separated min-path-hexes values for the hexagons-vs-time sweep.",
     )
     parser.add_argument(
         "--time-threshold-values",
-        type=parse_int_list,
+        type=ipb.parse_int_list,
         default=DEFAULT_TIME_THRESHOLDS,
         help="Comma-separated time-threshold values in seconds for the threshold sweep.",
     )

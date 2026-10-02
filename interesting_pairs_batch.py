@@ -10,7 +10,6 @@ import subprocess
 import time
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from math import atan2, cos, radians, sin, sqrt
 from pathlib import Path
 
 import branca.colormap as cm
@@ -118,12 +117,7 @@ class HexLookupTable:
         if cached is not None:
             return cached
 
-        lat1, lon1 = self.cell_to_latlng(key[0])
-        lat2, lon2 = self.cell_to_latlng(key[1])
-        dlat = radians(lat2 - lat1)
-        dlon = radians(lon2 - lon1)
-        term = sin(dlat / 2) ** 2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2) ** 2
-        distance = 2 * 6371 * atan2(sqrt(term), sqrt(1 - term))
+        distance = h3.great_circle_distance(self.cell_to_latlng(key[0]), self.cell_to_latlng(key[1]), unit="km")
         self.distance_cache[key] = distance
         self.distance_cache[(key[1], key[0])] = distance
         return distance
